@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veterinaria</title>
+  <!-- CSS Link -->
+  <link href="/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="/images/asmevet.jpeg" />
+    <h1>Azmevet Clínica Veterinaria</h1>
+
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/productos">Productos</a></li>
+        <li><a href="/servicios">Servicios</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    {{#if user}}
+    <div id="if-part" class="button">
+      <h1>Bienvenido, {{user.usuario}}!
+        <a href="/usuarios"><button type="button">Usuarios</button></a> 
+        <a href="/logout"><button type="button">Cerrar Sesión</button></a> 
+      </h1>
+    </div>
+    {{else}}
+    <div id="else-part" class="button">
+      <a href="/create"><button type="button">Registrarme</button></a>
+      <a href="/login"><button type="button">Iniciar Sesión</button></a>
+    </div>
+    {{/if}}
+  </header>
+  <!-- Document body -->
+  {{{body}}}
+
+</body>
+</html>

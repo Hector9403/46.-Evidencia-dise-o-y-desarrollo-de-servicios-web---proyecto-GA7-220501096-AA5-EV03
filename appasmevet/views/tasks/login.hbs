@@ -1,0 +1,33 @@
+<div class="formulario">
+    <img src="images/asmevet.jpeg" alt="username">
+    <h1>BIENVENIDO</h1>
+    <form action="/login" method="POST">
+        <div class="username">
+            <input type="text" name="usuario" placeholder="Usuario" id="usuario" >
+            <label for="usuario">Nombre de Usuario</label>
+        </div>
+        <div class="username">
+            <input type="password" name="password" placeholder="Password" id="password" >
+            <label for="password">contraseña</label>
+        </div>
+        <br>
+        <input type="submit" value="Iniciar Sesión">
+        <div>¿Olvidó su contraseña? &nbsp; &nbsp; <a href="/create">Registrarme</a></div>
+        <br>
+        <a href="/">volver a página principal</a>
+    </form>
+</div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{#if alert}}
+    <script>
+        Swal.fire({
+            title: '{{ alertTitle }}',
+            text: '{{ alertMessage}}',
+            icon: '{{ alertIcon}}',
+            showConfirmButton: '{{showConfirmButton}}',
+            timer: '{{ timer }}'
+        }).then(()=>{
+            window.location = '/{{ruta}}'
+        })
+    </script>
+{{/if}}

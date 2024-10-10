@@ -1,0 +1,37 @@
+<div class="registro">
+  <img src="images/asmevet.jpeg" alt="username" />
+  <h1>Registro Usuario</h1>
+  <form action="/create" method="POST">
+    <div class="username">
+      <input id="nombre" name="nombre" type="text" required />
+      <label for="nombre">Nombres y Apellidos</label>
+    </div>
+    <div class="username">
+      <input id="usuario" name="usuario" type="text" required />
+      <label for="usuario">Usuario</label>
+    </div>
+    <div class="username">
+      <input id="cedula" name="cedula" type="number" required />
+      <label for="cedula">Cédula</label>
+    </div>
+    <div class="username">
+      <input id="email" name="email" type="email" required />
+      <label for="email">Correo Electrónico</label>
+    </div>
+    <div class="username">
+      <input id="password" name="password" type="password" required />
+      <label for="password">contraseña</label>
+    </div>
+
+    {{!-- <div class="check-box">
+      <input type="checkbox" required> <label>Acepto términos y condiciones</label>
+    </div> --}}
+
+    <div class="username">
+      <input type="submit" value="Registrarme" />
+    </div>
+  </form>
+  <div class="recordar">
+    <a href="/login">Ya tengo una cuenta</a>
+  </div>
+</div>

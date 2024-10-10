@@ -1,0 +1,36 @@
+<br>
+<br>
+<br>
+<div class="">
+  <div class="">
+    <table class="">
+      <thead>
+        <tr class="">
+          <th class="">ID</th>
+          <th class="">Usuario</th>
+          <th class="">Email</th>
+          <th class="">Nombre</th>
+          <th >Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each tasks}}
+        <tr>
+          <td class="">{{id}}</td>
+          <td class="">{{usuario}}</td>
+          <td class="">{{email}}</td>
+          <td class="text-center">{{nombre}}</td>
+          <td >
+            <form action="/tasks/delete" method="POST" class="mx-2">
+              <input type="hidden" value="{{id}}" name="id">
+              <button class="" type="submit">
+                <i class=""></i> borrar</button>
+            </form>
+            <a href="/tasks/edit/{{id}}" class=""> <i class=""></i>Editar</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
